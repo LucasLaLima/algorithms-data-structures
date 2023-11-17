@@ -1,16 +1,16 @@
-def quicksort(values):
-  if len(values) <=1:
-    return values
+def quicksort(l):
+  if len(l) <= 1:
+    return l
   
-  pivot = values[0]
-  less_than_pivot = []
-  greater_than_pivot = []
-  for v in values[1:]:
-    if v <= pivot:
-      less_than_pivot.append(v)
+  pivot = l[0]
+  left = []
+  right = []
+  for i in l[1:]:
+    if i < pivot:
+      left.append(i)
     else:
-      greater_than_pivot.append(v)
-  return quicksort(less_than_pivot) + [pivot] + quicksort(greater_than_pivot)
+      right.append(i)
+  return quicksort(left) + [pivot] + quicksort(right)
 
 def main():
   # numbers = [1, 5, 0, 25, 12, 47, 30, 101, 50]
