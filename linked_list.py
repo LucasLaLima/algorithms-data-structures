@@ -44,10 +44,11 @@ class LinkedList:
     new_node = Node(data)
     new_node.next_node = self.head
     self.head = new_node
+    return
 
   def search(self, key):
     """
-    Search for first node containing data that matches the key.
+    Return first node containing data that matches the key.
     Returns the node or 'None' if not found.
     Takes O(n) run time.
     """
@@ -106,7 +107,7 @@ class LinkedList:
         self.head = current.next_node
       elif current.data == key:
         found = True
-        previous.next_node = current.next_node
+        previous.next_node = current.next_node # skipping over current node
       else:
         previous = current
         current = current.next_node

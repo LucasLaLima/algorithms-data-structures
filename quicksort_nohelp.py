@@ -1,15 +1,15 @@
-def quicksort(l):
-  if len(l) <= 1:
-    return l
-  
-  pivot = l[0]
+def quicksort(a):
+  if len(a) <= 1:
+    return a
+
+  pivot = a[0]
   left = []
   right = []
-  for i in l[1:]:
-    if i < pivot:
-      left.append(i)
+  for i in range(1, len(a)):
+    if a[i] < pivot:
+      left.append(a[i])
     else:
-      right.append(i)
+      right.append(a[i])
   return quicksort(left) + [pivot] + quicksort(right)
 
 def main():
