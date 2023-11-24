@@ -38,7 +38,7 @@ class LinkedList:
 
   def add(self, data):
     """
-    Adds a new node at the head of the list
+    Create and add a new node at the head of the list.
     This operation takes O(1) time
     """
     new_node = Node(data)
@@ -134,7 +134,19 @@ class LinkedList:
         nodes.append(f"[Tail: {current.data}]")
       else:
         nodes.append(f"[{current.data}]")
-      
+      current = current.next_node
+    return "->".join(nodes)
+
+  def __str__(self):
+    nodes = []
+    current = self.head
+    while current:
+      if current is self.head:
+        nodes.append(f"[Head: {current.data}]")
+      elif current.next_node is None: # tail
+        nodes.append(f"[Tail: {current.data}]")
+      else:
+        nodes.append(f"[{current.data}]")
       current = current.next_node
     return "->".join(nodes)
 

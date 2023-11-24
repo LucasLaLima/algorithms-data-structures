@@ -1,0 +1,12 @@
+Breadth FS:
+- Traverse graph level by level
+- Utilizes queue
+- Better if destination is on average close to the start
+- Siblings are visited before children
+
+Depth FS:
+- Traverse a graph branch by branch
+- Utilizes stack
+- Better if destination is on average far from the start
+- Children are visited before siblings
+- More popular for games / puzzles
