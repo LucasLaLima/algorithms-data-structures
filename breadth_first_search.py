@@ -1,4 +1,5 @@
 """
+BFS: 
 Algorithm for traversing a tree or a graph data structure.
 
 Rather than one 'branch' at a time, you traverse one 'level' at a time.
@@ -13,6 +14,8 @@ Etc.
 from collections import deque
 
 """
+Below is DFS:
+
 Given a starting point and a target/destination node, Depth First Search is a search algorithm for traversing a tree/graph data structure.
 
 Steps:
@@ -20,6 +23,7 @@ Steps:
 2) Keep going until you reach a dead end or a previously visited node
 3) Backtrack to last node that has unvisited adjacent neighbors.
 """
+
 """
 1. Create kxk matrix
 2. Row and column represent the nodes of the graph
